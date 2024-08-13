@@ -1,0 +1,41 @@
+// Marks of the students
+let marks = {
+    David: 80,
+    Vinoth: 77,
+    Divya: 88,
+    Ishitha: 95,
+    Thomas: 68
+};
+
+// Calculating the average marks
+let totalMarks = 0;
+let numberOfStudents = 0;
+for (let student in marks) {
+    totalMarks += marks[student];
+    numberOfStudents++;
+}
+let averageMarks = totalMarks / numberOfStudents;
+
+// Determining the grade using switch and case
+let grade;
+switch (true) {
+    case (averageMarks < 60):
+        grade = "F";
+        break;
+    case (averageMarks < 70):
+        grade = "D";
+        break;
+    case (averageMarks < 80):
+        grade = "C";
+        break;
+    case (averageMarks < 90):
+        grade = "B";
+        break;
+    case (averageMarks <= 100):
+        grade = "A";
+        break;
+    default:
+        grade = "Invalid";
+}
+
+console.log("The average marks are " + averageMarks + " and the grade is " + grade);
